@@ -42,9 +42,13 @@ function PromptButton(props: PromptButtonProps) {
 export function MiddleSection() {
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputValue = (e) => {
+  // const handleInputValue = (e) => {
+  //   setInputValue(e.target.value);
+  // };
+  const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
+
   return (
     <Center flex='1'>
       <VStack gap='6'>
